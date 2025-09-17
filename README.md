@@ -68,7 +68,7 @@ Add this to your MCP server configuration:
         "--init",
         "-e",
         "DOCKER_CONTAINER=true",
-        "ghcr.io/Schveppes/mcp-local-rag:latest"
+        "ghcr.io/schveppes/mcp-local-rag:latest"
       ]
     }
   }

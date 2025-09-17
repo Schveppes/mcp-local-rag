@@ -45,7 +45,7 @@ Add this to your MCP server configuration:
         "args": [
           "--python=3.10",
           "--from",
-          "git+https://github.com/nkapila6/mcp-local-rag",
+          "git+https://github.com/Schveppes/mcp-local-rag",
           "mcp-local-rag"
         ]
       }
@@ -68,7 +68,7 @@ Add this to your MCP server configuration:
         "--init",
         "-e",
         "DOCKER_CONTAINER=true",
-        "ghcr.io/nkapila6/mcp-local-rag:latest"
+        "ghcr.io/Schveppes/mcp-local-rag:latest"
       ]
     }
   }

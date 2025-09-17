@@ -28,6 +28,10 @@ def rag_search(query: str, num_results:int=10, top_k:int=5) -> Dict:
         Dict of strings containing best search based on input query. Formatted in markdown.
     """
     ddgs = DDGS()
+    if isinstance(top_k, str):
+        top_k = int(top_k)
+    if isinstance(num_results, str):
+        num_results = int(num_results)
     results = ddgs.text(query, max_results=num_results) 
     scored_results = sort_by_score(add_score_to_dict(query, results))
     top_results = scored_results[0:top_k]

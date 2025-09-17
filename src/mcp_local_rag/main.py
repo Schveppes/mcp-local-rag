@@ -14,15 +14,15 @@ mcp = FastMCP("RAG Web Search. Can perform Web Searches.",
                                   "beautifulsoup4", "requests"])
     
 @mcp.tool()
-def rag_search(query: str, num_results:int=10, top_k:int=5) -> Dict:
+def rag_search(query: str, num_results:str="10", top_k:str="5") -> Dict:
     """
     Search the web for a given query. Give back context to the LLM
     with a RAG-like similarity sort.
 
     Args:
         query (str): The query to search for.
-        num_results (int): Number of results to return.
-        top_k (int): Use top "k" results for content.
+        num_results (str): Number of results to return.
+        top_k (str): Use top "k" results for content.
 
     Returns:
         Dict of strings containing best search based on input query. Formatted in markdown.
